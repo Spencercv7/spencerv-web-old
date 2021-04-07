@@ -1,0 +1,57 @@
+{
+    "proficent": {
+        "skills": [
+            {
+                "skill_name": "CSS",
+                "skill_icon_src": "https://gist.githubusercontent.com/Spencercv7/9fb2550dea34116293188e83d3458bf8/raw/c6c0c13a0b4394b9beeae3f88c329829d3316d8a/css.svg",
+                "key": 1
+            },
+            {
+                "skill_name": "Java",
+                "skill_icon_src": "https://gist.githubusercontent.com/Spencercv7/9fb2550dea34116293188e83d3458bf8/raw/7312f5c1f60ecba17486123aa769b0b57228ab20/java.svg",
+                "key": 2
+            },
+            {
+                "skill_name": "HTML",
+                "skill_icon_src": "https://gist.github.com/Spencercv7/9fb2550dea34116293188e83d3458bf8/raw/7312f5c1f60ecba17486123aa769b0b57228ab20/html5.svg",
+                "key": 4
+            },
+            {
+                "skill_name": "Kafka",
+                "skill_icon_src": "https://gist.github.com/Spencercv7/9fb2550dea34116293188e83d3458bf8/raw/6d71ddacb37092ca4e26f1b87c7d565e8c44959d/kafka.svg",
+                "key": 5
+            },{
+                "skill_name": "Python",
+                "skill_icon_src": "https://gist.github.com/Spencercv7/9fb2550dea34116293188e83d3458bf8/raw/6d71ddacb37092ca4e26f1b87c7d565e8c44959d/python.svg",
+                "key": 6
+            }
+        ]
+    },
+    "experienced": {
+        "skills": [
+            {
+                "skill_name": "Javascript",
+                "skill_icon_src": "https://gist.github.com/Spencercv7/9fb2550dea34116293188e83d3458bf8/raw/6d71ddacb37092ca4e26f1b87c7d565e8c44959d/javascript.svg",
+                "key": 1
+            },
+            {
+                "skill_name": "React",
+                "skill_icon_src": "https://gist.github.com/Spencercv7/9fb2550dea34116293188e83d3458bf8/raw/6d71ddacb37092ca4e26f1b87c7d565e8c44959d/react.svg",
+                "key": 2
+            },{
+                "skill_name": "Sass",
+                "skill_icon_src": "https://gist.github.com/Spencercv7/9fb2550dea34116293188e83d3458bf8/raw/6d71ddacb37092ca4e26f1b87c7d565e8c44959d/sass.svg",
+                "key": 3
+            }
+        ]
+    },
+    "learning": {
+        "skills": [
+            {
+                "skill_name": "Unity",
+                "skill_icon_src": "https://gist.github.com/Spencercv7/9fb2550dea34116293188e83d3458bf8/raw/6d71ddacb37092ca4e26f1b87c7d565e8c44959d/unity.svg",
+                "key": 1
+            }
+        ]
+    }
+}

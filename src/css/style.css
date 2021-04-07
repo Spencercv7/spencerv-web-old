@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+:root {
+  --big-content-width: 90rem;
+  --heading-font-family: "Sacramento", cursive;
+  --secondary-font-family: 'senextrabold';
+  --regular-font-family: 'senregular';
+  --heading-font-size: 10rem;
+  --secondary-font-size: 2.3rem;
+  --regular-font-size: 1.7rem;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-primary: #eaebe8;
+  --color-blue-light: #6D9AA0;
+  --color-blue-dark: #24414F;
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+  --color-grey-dark-1: #333333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+  --rgba-grey-dark-1: rgba(51, 51, 51, .2);
+  --shadow-dark: 0 .5rem .5rem rgba(0, 0, 0, .2);
+  --shadow-light: 0 1rem 2rem rgba(0,0,0,.1);
+  --text-shadow-light: 2px 2px rgba(#000, .4);
+  --text-shadow-blue: -2px -2px 0 var(--color-blue-light);
+  --border-radius-small: 3px; }
+
+/* 
+
+    MEDIA QUERY MANAGER
+        0 - 600px: Phone.
+        600 - 900px: Tablet Portrait.
+        900 - 1200px: Tablet Landscape.
+        [1200 - 1800] is normal styling.
+        1800px + : Big Desktop.
+
+    $breakpoint argument choices:
+        - Phone
+        - Tab-Port
+        - Tab-Land
+        - Big-Desktop
+        
+*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  /* == 1 rem == 10px */ }
+  @media (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+section {
+  display: grid;
+  justify-items: center;
+  padding: 5rem 0; }
+
+@keyframes parallax {
+  to {
+    transform: translateY(20rem); } }
+
+.header__title--main {
+  text-shadow: 1.5px 1.5px rgba(255, 255, 255, 0.4); }
+  .header__title--main::after {
+    content: "Software Developer";
+    text-shadow: none;
+    font-size: 2.5rem;
+    font-weight: 100;
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0rem;
+    color: var(--color-black);
+    text-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.25); }
+
+.content-view {
+  width: 100vw;
+  height: 100vh;
+  position: relative; }
+  .content-view__background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1000;
+    background-image: url("../../img/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: parallax 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both; }
+  .content-view__header-wrapper {
+    width: 100vw;
+    height: 100vh; }
+  .content-view__header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 43%; }
+
+#about-me {
+  position: relative;
+  background-color: #EAEBE8;
+  color: var(--color-grey-dark-1);
+  z-index: 0; }
+  #about-me__content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    position: relative;
+    width: var(--big-content-width); }
+  #about-me__text {
+    margin-left: 3rem; }
+  #about-me__header {
+    margin-bottom: 1rem;
+    text-shadow: var(--text-shadow-blue); }
+  #about-me__picture {
+    width: 15rem;
+    height: 15rem;
+    background-size: cover;
+    background-image: url("../../img/me.jpg");
+    background-position: center;
+    border-radius: 100%;
+    margin: 2rem;
+    position: inherit;
+    justify-self: end; }
+    #about-me__picture::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 112%;
+      width: 112%;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+      background-color: var(--color-grey-dark-1);
+      border-radius: 100%;
+      z-index: -1; }
+
+#skills {
+  overflow: hidden;
+  position: relative; }
+  #skills__background {
+    position: absolute;
+    top: 0;
+    z-index: -500;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-image: url("../../img/background_skills.jpg"); }
+  #skills__header {
+    margin-bottom: 3rem;
+    color: var(--color-primary);
+    text-shadow: var(--text-shadow-blue);
+    font-size: 3rem; }
+  #skills__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 3rem; }
+
+.skills__group {
+  position: relative;
+  background-color: var(--rgba-grey-dark-1);
+  box-shadow: var(--shadow-dark);
+  padding: 3rem;
+  margin: .5rem;
+  transition: all .2s; }
+  .skills__group:hover {
+    transform: scale(1.1); }
+  .skills__group--name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+    font-family: var(--secondary-font-family);
+    color: var(--color-grey-light-4);
+    font-size: 2.5rem;
+    transition: all .2s .1s; }
+
+.skills__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, max-content);
+  grid-gap: 1rem; }
+
+.skills__skill {
+  background-color: var(--color-grey-light-3);
+  box-shadow: var(--shadow-dark);
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  justify-items: center;
+  width: 15rem;
+  max-height: 3rem; }
+  .skills__skill--image {
+    width: 3rem;
+    height: 3rem;
+    background-color: aqua; }
+  .skills__skill--text {
+    display: inline-block; }
+
+.divider {
+  width: 100vw;
+  height: 1rem;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--color-grey-dark-1);
+  box-shadow: var(--shadow-dark); }
+
+h1 {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size);
+  white-space: nowrap; }
+
+h2 {
+  font-family: var(--secondary-heading-font-family);
+  font-size: var(--secondary-font-size); }
+
+*,
+::before,
+::after {
+  font-family: var(--regular-font-family);
+  font-size: var(--regular-font-size); }
+
+@font-face {
+  font-family: 'senbold';
+  src: url("../../fonts/sen-bold-webfont.woff2") format("woff2"), url("../../fonts/sen-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'senextrabold';
+  src: url("../../fonts/sen-extrabold-webfont.woff2") format("woff2"), url("../../fonts/sen-extrabold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'senregular';
+  src: url("../../fonts/sen-regular-webfont.woff2") format("woff2"), url("../../fonts/sen-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }

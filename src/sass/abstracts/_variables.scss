@@ -1,0 +1,48 @@
+:root {
+
+    // MEDIA QUERY VARIABLES
+    --big-content-width: 90rem;
+
+    // FONT FAMILIES
+    --heading-font-family: "Sacramento", cursive;
+    --secondary-font-family: 'senextrabold';
+    --regular-font-family: 'senregular';
+
+    // FONT SIZES 
+    --heading-font-size: 10rem;
+    --secondary-font-size: 2.3rem;
+    --regular-font-size: 1.7rem;
+
+    // COLORS
+    --color-white: #fff;
+    --color-black: #000;
+
+    --color-primary: #eaebe8;
+
+    --color-blue-light: #6D9AA0;
+    --color-blue-dark: #24414F;
+
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
+
+    --color-grey-dark-1: #333333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;
+
+    --rgba-grey-dark-1: rgba(51, 51, 51, .1);
+
+
+    // SHADOWS
+    --shadow-dark: 0 .5rem .5rem rgba(0, 0, 0, .2);
+    --shadow-light: 0 1rem 2rem rgba(0,0,0,.1);
+
+    --text-shadow-light: 2px 2px rgba(#000, .4);
+    --text-shadow-blue: -2px -2px 0 var(--color-blue-light);
+
+    // BORDER RADIUS
+    --border-radius-small: 3px;
+
+
+}

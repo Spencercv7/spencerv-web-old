@@ -1,0 +1,59 @@
+#about-me {
+
+    position: relative;
+    background-color: #EAEBE8;
+    color: var(--color-grey-dark-1);
+    z-index: 0;
+
+    &__content {
+        display: grid;
+
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+
+        position: relative;
+        width: var(--big-content-width);
+    }
+
+    &__text {
+        margin-left: 3rem;
+    }
+    
+
+    &__header {
+        margin-bottom: 1rem;
+        text-shadow: var(--text-shadow-blue);
+    }
+
+    &__picture {
+
+        width: 15rem;
+        height: 15rem;
+
+        background-size: cover;
+        background-image: url("../../img/me.jpg");
+        background-position: center;
+        border-radius: 100%;
+
+        margin: 2rem;
+        position: inherit;
+
+        justify-self: end;
+
+        // Border
+        &::before {
+
+            content: "";
+            @include absCenter;
+            height: 112%;
+            width: 112%;
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+            background-color: var(--color-grey-dark-1);
+            border-radius: 100%;
+            z-index: -1;
+
+        }
+    }
+
+}

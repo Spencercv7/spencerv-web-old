@@ -1,0 +1,21 @@
+
+// Abstracts
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// Base
+@import "base/base";
+@import "base/animations";
+
+// Layout
+@import "layout/header";
+@import "layout/body";
+@import "layout/about-me";
+@import "layout/skills";
+
+// Components
+@import "components/divider";
+
+// FONT IMPORT
+@import "base/typography";
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');

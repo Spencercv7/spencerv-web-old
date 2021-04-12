@@ -5,13 +5,16 @@
 
     // FONT FAMILIES
     --heading-font-family: "Sacramento", cursive;
-    --secondary-font-family: 'senextrabold';
-    --regular-font-family: 'senregular';
+    --secondary-font-family: 'Oswald', sans-serif;
+    --regular-font-family: 'Oswald', sans-serif;
 
     // FONT SIZES 
     --heading-font-size: 10rem;
-    --secondary-font-size: 2.3rem;
+    --secondary-font-size: 5rem;
     --regular-font-size: 1.7rem;
+
+    --secondary-font-weight: 600;
+    --regular-font-weight: 400;
 
     // COLORS
     --color-white: #fff;
@@ -20,7 +23,7 @@
     --color-primary: #eaebe8;
 
     --color-blue-light: #6D9AA0;
-    --color-blue-dark: #24414F;
+    --color-blue-dark: #2f5568;
 
     --color-grey-light-1: #faf9f9;
     --color-grey-light-2: #f4f2f2;

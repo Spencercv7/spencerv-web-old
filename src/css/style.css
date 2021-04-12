@@ -1,17 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 :root {
   --big-content-width: 90rem;
   --heading-font-family: "Sacramento", cursive;
-  --secondary-font-family: 'senextrabold';
-  --regular-font-family: 'senregular';
+  --secondary-font-family: 'Oswald', sans-serif;
+  --regular-font-family: 'Oswald', sans-serif;
   --heading-font-size: 10rem;
-  --secondary-font-size: 2.3rem;
+  --secondary-font-size: 5rem;
   --regular-font-size: 1.7rem;
+  --secondary-font-weight: 600;
+  --regular-font-weight: 400;
   --color-white: #fff;
   --color-black: #000;
   --color-primary: #eaebe8;
   --color-blue-light: #6D9AA0;
-  --color-blue-dark: #24414F;
+  --color-blue-dark: #2f5568a2;
   --color-grey-light-1: #faf9f9;
   --color-grey-light-2: #f4f2f2;
   --color-grey-light-3: #f0eeee;
@@ -19,7 +22,7 @@
   --color-grey-dark-1: #333333;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
-  --rgba-grey-dark-1: rgba(51, 51, 51, .2);
+  --rgba-grey-dark-1: rgba(51, 51, 51, .1);
   --shadow-dark: 0 .5rem .5rem rgba(0, 0, 0, .2);
   --shadow-light: 0 1rem 2rem rgba(0,0,0,.1);
   --text-shadow-light: 2px 2px rgba(#000, .4);
@@ -68,24 +71,41 @@ html {
 section {
   display: grid;
   justify-items: center;
-  padding: 5rem 0; }
+  padding: 4rem 0; }
 
 @keyframes parallax {
   to {
     transform: translateY(20rem); } }
+
+@keyframes project-item-fade {
+  0% {
+    opacity: 100%; }
+  50% {
+    opacity: 0%; }
+  100% {
+    opacity: 100%; } }
+
+@keyframes item-shake {
+  0% {
+    transform: rotate(0deg); }
+  33% {
+    transform: rotate(2deg); }
+  66% {
+    transform: rotate(-2deg); }
+  100% {
+    transform: rotate(0); } }
 
 .header__title--main {
   text-shadow: 1.5px 1.5px rgba(255, 255, 255, 0.4); }
   .header__title--main::after {
     content: "Software Developer";
     text-shadow: none;
-    font-size: 2.5rem;
-    font-weight: 100;
+    font-size: 3rem;
     position: absolute;
     bottom: 0.75rem;
     right: 0rem;
     color: var(--color-black);
-    text-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.25); }
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2); }
 
 .content-view {
   width: 100vw;
@@ -130,8 +150,12 @@ section {
   #about-me__text {
     margin-left: 3rem; }
   #about-me__header {
-    margin-bottom: 1rem;
-    text-shadow: var(--text-shadow-blue); }
+    font-size: 2.1rem;
+    font-weight: 600; }
+    #about-me__header span {
+      font-family: var(--heading-font-family);
+      font-size: 3rem;
+      font-weight: 900; }
   #about-me__picture {
     width: 15rem;
     height: 15rem;
@@ -162,15 +186,15 @@ section {
     position: absolute;
     top: 0;
     z-index: -500;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-image: url("../../img/background_skills.jpg"); }
   #skills__header {
-    margin-bottom: 3rem;
-    color: var(--color-primary);
+    margin-bottom: 1rem;
+    color: var(--color-grey-dark-1);
     text-shadow: var(--text-shadow-blue);
-    font-size: 3rem; }
+    font-family: var(--heading-font-family); }
   #skills__content {
     display: grid;
     grid-template-columns: 1fr;
@@ -183,40 +207,87 @@ section {
   box-shadow: var(--shadow-dark);
   padding: 3rem;
   margin: .5rem;
-  transition: all .2s; }
+  transition: all .2s;
+  overflow: hidden; }
   .skills__group:hover {
-    transform: scale(1.1); }
+    transform: scale(1.03); }
+  .skills__group:hover .skills__group--name {
+    color: var(--color-primary); }
   .skills__group--name {
     position: absolute;
-    top: 0;
     left: 0;
+    bottom: 0;
     text-transform: uppercase;
     font-family: var(--secondary-font-family);
-    color: var(--color-grey-light-4);
-    font-size: 2.5rem;
-    transition: all .2s .1s; }
-
-.skills__list {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(5, max-content);
-  grid-gap: 1rem; }
+    color: var(--color-blue-dark);
+    font-size: 4rem;
+    font-weight: 900;
+    transition: all .2s .1s;
+    line-height: 0.9;
+    z-index: 1; }
+  .skills__group--list {
+    position: relative;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, max-content);
+    grid-gap: 1rem;
+    z-index: 2; }
 
 .skills__skill {
-  background-color: var(--color-grey-light-3);
+  background-color: var(--color-grey-light-4);
   box-shadow: var(--shadow-dark);
   display: grid;
   grid-template-columns: max-content 1fr;
   align-items: center;
   justify-items: center;
-  width: 15rem;
-  max-height: 3rem; }
+  width: 12rem;
+  height: 3rem;
+  transition: all .2s; }
   .skills__skill--image {
-    width: 3rem;
+    width: 2.5rem;
+    height: 2.5rem; }
+  .skills__skill--image-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
     height: 3rem;
-    background-color: aqua; }
+    width: 3rem;
+    background-color: var(--color-grey-light-3); }
   .skills__skill--text {
-    display: inline-block; }
+    font-weight: 350; }
+  .skills__skill:hover {
+    animation: item-shake ease-in .3s; }
+
+#projects {
+  background-color: var(--color-primary); }
+  #projects__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: var(--big-content-width);
+    margin-top: 3rem;
+    background-color: orangered; }
+    #projects__content--bar-main {
+      width: var(--big-content-width);
+      display: flex;
+      justify-content: space-around; }
+      #projects__content--bar-main[animation='1'] {
+        animation: project-item-fade 1s 1; }
+    #projects__content--bar-side {
+      width: 0; }
+
+.bar-main__item {
+  background-color: var(--color-blue-light);
+  margin: 1rem;
+  height: 12rem;
+  width: 18rem;
+  list-style: none; }
+
+.default-bar-pos {
+  flex-direction: row; }
+
+.side-bar-pos {
+  flex-direction: column; }
 
 .divider {
   width: 100vw;
@@ -229,32 +300,17 @@ section {
 h1 {
   font-family: var(--heading-font-family);
   font-size: var(--heading-font-size);
+  font-weight: 900;
   white-space: nowrap; }
 
 h2 {
-  font-family: var(--secondary-heading-font-family);
-  font-size: var(--secondary-font-size); }
+  font-family: var(--heading-font-family);
+  font-size: var(--secondary-font-size);
+  font-weight: var(--secondary-font-weight); }
 
 *,
 ::before,
 ::after {
   font-family: var(--regular-font-family);
-  font-size: var(--regular-font-size); }
-
-@font-face {
-  font-family: 'senbold';
-  src: url("../../fonts/sen-bold-webfont.woff2") format("woff2"), url("../../fonts/sen-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'senextrabold';
-  src: url("../../fonts/sen-extrabold-webfont.woff2") format("woff2"), url("../../fonts/sen-extrabold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'senregular';
-  src: url("../../fonts/sen-regular-webfont.woff2") format("woff2"), url("../../fonts/sen-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
+  font-size: var(--regular-font-size);
+  font-weight: var(--regular-font-weight); }

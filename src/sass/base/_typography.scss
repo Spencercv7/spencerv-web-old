@@ -1,13 +1,15 @@
 h1 {
     font-family: var(--heading-font-family);
     font-size: var(--heading-font-size);
+    font-weight: 900;
     white-space: nowrap;
     
 }
 
 h2 {
-    font-family: var(--secondary-heading-font-family);
+    font-family: var(--heading-font-family);
     font-size: var(--secondary-font-size);
+    font-weight: var(--secondary-font-weight);
 }
 
 *,
@@ -15,31 +17,5 @@ h2 {
 ::after {
     font-family: var(--regular-font-family);
     font-size: var(--regular-font-size);
-}
-
-@font-face {
-    font-family: 'senbold';
-    src: url('../../fonts/sen-bold-webfont.woff2') format('woff2'),
-         url('../../fonts/sen-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'senextrabold';
-    src: url('../../fonts/sen-extrabold-webfont.woff2') format('woff2'),
-         url('../../fonts/sen-extrabold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'senregular';
-    src: url('../../fonts/sen-regular-webfont.woff2') format('woff2'),
-         url('../../fonts/sen-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+    font-weight: var(--regular-font-weight);
 }

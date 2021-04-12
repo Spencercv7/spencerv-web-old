@@ -22,8 +22,16 @@
     
 
     &__header {
-        margin-bottom: 1rem;
-        text-shadow: var(--text-shadow-blue);
+
+        font-size: 2.1rem;
+        font-weight: 600;
+
+        span {
+            font-family: var(--heading-font-family);
+            font-size: 3rem;
+            font-weight: 900;
+        }
+
     }
 
     &__picture {

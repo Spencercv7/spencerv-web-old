@@ -10,8 +10,8 @@
 
         z-index: -500;
 
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
 
         background-size: cover;
         background-image: url('../../img/background_skills.jpg');
@@ -19,10 +19,11 @@
     }
 
     &__header {
-        margin-bottom: 3rem;
-        color: var(--color-primary);
+        margin-bottom: 1rem;
+        color: var(--color-grey-dark-1);
         text-shadow: var(--text-shadow-blue);
-        font-size: 3rem;
+
+        font-family: var(--heading-font-family);
     }
 
     &__content {
@@ -51,29 +52,41 @@
 
         transition: all .2s;
 
+        overflow: hidden;
+
         &:hover {
-            transform: scale(1.1);
+            transform: scale(1.03);
+        }
+
+        &:hover &--name {
+            color: var(--color-primary);
         }
 
         &--name {
             position: absolute;
-            top: 0;
             left: 0;
+            bottom: 0;
             
             text-transform: uppercase;
             font-family: var(--secondary-font-family);
-            color: var(--color-grey-light-4);
-            font-size: 2.5rem;
+            color: var(--color-blue-dark);
+            font-size: 4rem;
+            font-weight: 900;
             
             transition: all .2s .1s;
+
+            line-height: 0.9;
+            z-index: 1;
         }
 
         &--list {
+            position: relative;
             list-style: none;
     
             display: grid;
             grid-template-columns: repeat(5, max-content);
             grid-gap: 1rem;
+            z-index: 2;
         }
     }
 
@@ -88,16 +101,31 @@
         align-items: center;
         justify-items: center;
 
-        width: 15rem;
+        width: 12rem;
         height: 3rem;
 
+        transition: all .2s;
+
         &--image {
-            width: 3rem;
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+
+        &--image-container {
+            display: grid;
+            justify-content: center;
+            align-items: center;
             height: 3rem;
+            width: 3rem;
             background-color: var(--color-grey-light-3);
         }
 
         &--text {
+            font-weight: 350;
+        }
+
+        &:hover {
+            animation: item-shake ease-in .3s;
         }
     }
 

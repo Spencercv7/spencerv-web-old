@@ -43,6 +43,11 @@
                 "skill_icon_src": "https://gist.github.com/Spencercv7/9fb2550dea34116293188e83d3458bf8/raw/6d71ddacb37092ca4e26f1b87c7d565e8c44959d/sass.svg",
                 "key": 3
             }
+            ,{
+                "skill_name": "Scala",
+                "skill_icon_src": "https://gist.githubusercontent.com/Spencercv7/9fb2550dea34116293188e83d3458bf8/raw/6d71ddacb37092ca4e26f1b87c7d565e8c44959d/scala.svg",
+                "key": 4
+            }
         ]
     },
     "learning": {
@@ -51,6 +56,16 @@
                 "skill_name": "Unity",
                 "skill_icon_src": "https://gist.github.com/Spencercv7/9fb2550dea34116293188e83d3458bf8/raw/6d71ddacb37092ca4e26f1b87c7d565e8c44959d/unity.svg",
                 "key": 1
+            },
+            {
+                "skill_name": "Gatsby JS",
+                "skill_icon_src": "https://gist.github.com/Spencercv7/9fb2550dea34116293188e83d3458bf8/raw/6d71ddacb37092ca4e26f1b87c7d565e8c44959d/unity.svg",
+                "key": 2
+            },
+            {
+                "skill_name": "Next JS",
+                "skill_icon_src": "https://gist.github.com/Spencercv7/9fb2550dea34116293188e83d3458bf8/raw/6d71ddacb37092ca4e26f1b87c7d565e8c44959d/unity.svg",
+                "key": 2
             }
         ]
     }

@@ -1,0 +1,57 @@
+#references {
+    
+    background-image: linear-gradient(to bottom right, var(--color-blue-dark), var(--color-blue-light));
+
+    &__header {
+        color: var(--color-grey-dark-1);
+    }
+
+    &__content {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+
+        width: var(--big-content-width);
+
+        margin-top: 3rem;
+
+        background-color: orangered;
+
+        &--bar-main {
+
+            width: var(--big-content-width);
+            
+            display: flex;
+            justify-content: space-around;
+
+            &[animation='1'] {
+                animation: project-item-fade 1s 1;
+            }
+        }
+
+        &--bar-side {
+            width: 0;
+        }
+
+        
+    }
+
+}
+
+.bar-main__item {
+    background-color: var(--color-blue-light);
+    margin: 1rem;
+    height: 12rem;
+    width: 18rem;
+    list-style: none;
+}
+
+.default-bar-pos {
+    flex-direction: row;
+}
+
+.side-bar-pos {
+    flex-direction: column;
+}

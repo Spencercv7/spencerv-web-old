@@ -4,6 +4,8 @@ import '../../sass/main.scss';
 import Header from "../layout/Header";
 import AboutMe from '../layout/AboutMe';
 import Skills from '../layout/Skills';
+import Projects from '../layout/Projects';
+import References from '../layout/References';
 
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
             <Header/>
             <AboutMe/>
             <Skills/>
+            <Projects/>
+            <References/>
 
         </div>
     </div>
